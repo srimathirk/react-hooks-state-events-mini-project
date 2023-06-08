@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { CATEGORIES } from "../data";
 function NewTaskForm({ categories, onFormSubmit }) {
   const [newText, setNewText] = useState("");
-  const [addCategory, setAddCategory] = useState("");
+  const [addCategory, setAddCategory] = useState("code");
 
   function handleSubmit(e) {
     e.preventDefault();
