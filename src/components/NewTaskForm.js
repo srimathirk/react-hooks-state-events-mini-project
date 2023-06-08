@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { CATEGORIES } from "../data";
-function NewTaskForm({ onFormSubmit }) {
+function NewTaskForm({ categories, onFormSubmit }) {
   const [newText, setNewText] = useState("");
   const [addCategory, setAddCategory] = useState("");
 
@@ -34,7 +34,7 @@ function NewTaskForm({ onFormSubmit }) {
           onChange={handleCategoryChange}
         >
           {/* render <option> elements for each category here */}
-          {CATEGORIES.filter((category) => category !== "All").map(
+          {categories.filter((category) => category !== "All").map(
             (category) => (
               <option key={category}>{category}</option>
             )
