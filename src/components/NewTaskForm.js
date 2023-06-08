@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
 import { CATEGORIES } from "../data";
-function NewTaskForm({ categories, onFormSubmit }) {
+function NewTaskForm({ categories, onTaskFormSubmit }) {
   const [newText, setNewText] = useState("");
   const [addCategory, setAddCategory] = useState("code");
 
   function handleSubmit(e) {
     e.preventDefault();
-    onFormSubmit({ text: newText, category: addCategory });
+    onTaskFormSubmit({ text: newText, category: addCategory });
   }
   function handleTextChange(e) {
     setNewText(e.target.value);
